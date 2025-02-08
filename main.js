@@ -40,7 +40,7 @@ const user_name = document.getElementById("name")
 const date_bday = document.getElementById("B-day")
 
 sign_select.addEventListener('change',() => {
-    const source = sign_select.options[sign_select.selectedIndex].text;
+    const source = sign_select.options[sign_select.selectedIndex].text.toLowerCase();
     sign_image.src = "IMGS/signs/" + source + ".png"
 
 })
