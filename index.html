@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarot-App</title>
+    <link rel="stylesheet" href="main_style.css">
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+</head>
+    <body>
+        <div class="background-major">
+            
+        </div>
+
+        <button onclick="triggerFireEffect()">Activate Fire</button>
+
+        <div id="fire-container">
+            <div id="background-flames"></div>
+            <div id="particles"></div>
+        </div>
+
+        <header class="main-header">
+            <img src="IMGS\header_imgs\flying-broom-and-witch.png" alt="#">
+            <img src="IMGS\header_imgs\cauldron.png" alt="#">
+            <h1 class="bigTitle">Tarotiniada</h1>
+            <img src="IMGS\header_imgs\spell-book.png" alt="#">
+            <img src="IMGS\header_imgs\black-evil-cat.png" alt="#">
+        </header>
+
+        <form action="" class="main-form" id="main_form">
+            <div class="input-label-wrapper">
+                <label for="name" class="input-label">Name</label>
+                <input type="datetime" name="name" id="name" required>
+            </div>
+
+            <div class="input-label-wrapper">
+                <label for="B-day" class="input-label">Birthday</label>
+                <input type="date" name="B-day" id="B-day" required>
+            </div>
+
+            <div class="sign-img-wrapper">
+                <div class="input-label-wrapper">
+                    <label for="signs" class="input-label">Sign</label>
+                    <select id="signs-select" name="signs" class="select-wrapper" id="signs" required>
+                        <option value="aries">Aries </option>
+                        <option value="cancer">Cancer</option>
+                        <option value="libra">Libra</option>
+                        <option value="capricorn">Capricorn</option>
+                        <option value="taurus">Taurus</option>
+                        <option value="leo">Leo</option>
+                        <option value="scorpio">Scorpio</option>
+                        <option value="aquarius">Aquarius</option>
+                        <option value="gemini">Gemini</option>
+                        <option value="virgo">Virgo</option>
+                        <option value="sagittarius">Sagittarius</option>
+                        <option value="pisces"> Pisces</option>
+                    </select>
+                </div>
+                <img src="IMGS\signs\aries.png" alt="#" id="sign_image">
+            </div>
+            <button type="submit" class="submit-button" id="submit-future">Show Future</button>
+        </form>
+        <div class="magic-wheel-card-template-wrapper">
+            <div class="magic-wheel">
+                <img src="" id="img1"></img>
+                <img src="" id="img2"></img>
+                <img src="" id="img3"></img>
+                <img src="" id="img4"></img>
+                <img src="" id="img5"></img> 
+                <img src="" id="img6"></img>
+                <img src="" id="img7"></img>
+                <img src="" id="img8"></img> 
+            </div>
+            <div class="card-template">
+                <img src="" alt="#" class="card-img" id="card-img"></img>
+                <div class="text-wrapper">
+                    <div class="title-wrapper">
+                        <h2 class="title" id="card_title"> </h2>
+                    </div>
+                    <label class="label-text">Relevance :</label>
+                    <p class="meaning-rev" id="card-meaning-rev"> </p>
+                    <label class="label-text">Meaning :</label>
+                    <p class="meaning-up" id="card-meaning-up"> </p>
+                    <label class="label-text">Description :</label>
+                    <p class="desc" id="card-description"> </p>
+                </div>
+            </div>
+        </div>
+        <div id="chat-now" class="all-chat-logs">
+            <h2>LIVE LOGS</h2>
+            <div class="logs-and-img-wrapper">
+                <div class="chat-logs-wrapper" id="chat-logs-wrapper">
+                
+                </div>
+                <img src="/IMGS/tarot_cards/Ace of Wands.png" alt="#" id="obtained_card" class="obtained-img">
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="main.js"> </script>
+    </body>
+</html>
